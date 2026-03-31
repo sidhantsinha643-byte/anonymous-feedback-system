@@ -1,0 +1,326 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:url("../images/uni.jpg") no-repeat center center/cover;
+color:var(--text);
+min-height:100vh;
+position:relative;
+}
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.85);
+z-index:-1;
+}
+
+:root{
+--bg:#f5f6fa;
+--text:#222;
+--card:#ffffff;
+--primary:#3b82f6;
+}
+
+.dark{
+--bg:#1e1e1e;
+--text:#ffffff;
+--card:#2c2c2c;
+}
+.dark body::before{
+background:rgba(0,0,0,0.7);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
+    padding: 15px 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:40px auto;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+backdrop-filter:blur(6px);
+}
+
+h2{
+margin-bottom:20px;
+}
+
+input, select, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+textarea{
+min-height:120px;
+resize:none;
+}
+
+button{
+background:var(--primary);
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+text-align:center;
+background:var(--card);
+}
+
+.feedback-box{
+border-bottom:1px solid #ddd;
+padding:15px 0;
+}
+
+.toggle-btn{
+cursor:pointer;
+padding:6px 12px;
+border-radius:5px;
+background:#444;
+color:white;
+}
+/* HEADER */
+
+.main-header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:var(--card);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:1000;
+}
+
+/* LOGO */
+
+.logo a{
+font-size:22px;
+font-weight:bold;
+text-decoration:none;
+color:var(--primary);
+}
+
+/* NAV MENU */
+
+.nav-menu{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:var(--text);
+font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-menu a:hover{
+color:var(--primary);
+}
+
+/* THEME BUTTON */
+
+.theme-btn{
+background:var(--primary);
+border:none;
+color:white;
+padding:6px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+/* SPACE BELOW HEADER */
+
+.container{
+margin-top:100px;
+width:90%;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+/* LOGO SECTION */
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-img{
+height:40px;
+width:auto;
+}
+
+.logo a{
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+color:var(--primary);
+}
+/* NAV MENU LINKS */
+
+.nav-menu a{
+position:relative;
+text-decoration:none;
+color:var(--text);
+font-size:15px;
+font-weight:500;
+padding:5px 0;
+transition:0.3s;
+}
+
+/* UNDERLINE EFFECT */
+
+.nav-menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-3px;
+width:0%;
+height:2px;
+background:var(--primary);
+transition:width 0.3s ease;
+}
+
+/* HOVER ANIMATION */
+
+.nav-menu a:hover::after{
+width:100%;
+}
+
+.nav-menu a:hover{
+color:var(--primary);
+}
+/* FORM CARD */
+
+.form-card{
+max-width:420px;
+margin:120px auto;
+background:var(--card);
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.form-card h2{
+margin-bottom:20px;
+}
+
+/* INPUT FIELDS */
+
+.form-card input{
+width:100%;
+padding:12px;
+margin:12px 0;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+transition:0.2s;
+}
+
+.form-card input:focus{
+border-color:var(--primary);
+outline:none;
+box-shadow:0 0 5px rgba(59,130,246,0.3);
+}
+
+/* BUTTON */
+
+.form-card button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:var(--primary);
+border:none;
+color:white;
+font-size:15px;
+border-radius:6px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.form-card button:hover{
+opacity:0.9;
+}
+.thankyou-card{
+    width:400px;
+    margin:120px auto;
+    padding:40px;
+    text-align:center;
+    background:rgba(255,255,255,0.9);
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(6px);
+}
+
+.thankyou-card h2{
+    color:#2c3e50;
+    margin-bottom:10px;
+}
+
+.thankyou-card p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.back-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#007BFF;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.back-btn:hover{
+    background:#0056b3;
+}
